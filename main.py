@@ -13,5 +13,5 @@ def diceRoll(x,y,z):                                           #   x = Dice Coun
             x = x+1                                            #   One is added to the loop, so this roll isnt lost.
         if (roll > z):                                         #   If the roll is above the Minimum roll to succeed
             print(roll)                                        #   Outputs the roll as is
-            total = roll + total                               #   The roll is added to the totall
+            total = roll + total                               #   The roll is added to the total
         x = x-1        
