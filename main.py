@@ -1,5 +1,5 @@
 import d20
-import tkinter
+import tkinter as tk
 
 def Start():
     print("Welcome to our Dice Calculator")
@@ -61,6 +61,7 @@ def dndDiceCharCalc():
     
 def dndHelp():
     print("Inputs are formatted Dice-Count 'd' Dice-Type '+' Modifier")
+    print("Suggested dice for this system: d4, d6, d8, d10, d12, d20, d100.")
     print("Example: 1d20+2 ")
     print('To Go back type "Back"')
 
@@ -73,3 +74,19 @@ def wh40kDiceInput():
 '''
 
 Start()
+
+# TKINTER TIME :)
+
+root = tk.Tk()
+app = Application(master=root)
+app.mainloop()
+
+class Application(tk.Frame):
+    def __init__(self, master=None):
+        super().__init__(master)
+        self.master = master
+        self.pack()
+        self.create_widgets()
+
+    def create_widgets(self):
+        
