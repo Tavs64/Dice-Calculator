@@ -40,28 +40,35 @@ class Application(Frame):  # Application is a Frame (inheritance from Frame)
         
         # Buttons and Text
         systemIndicator = Button(text=systemName[0], bg=systemColor[0])
-        systemIndicator.grid(column=0, row=0, columnspan=8, sticky = N+W+E+S)
+        systemIndicator.grid(column=0, row=0, columnspan=8, sticky = N+E+W)
+# Spacing Labels
+        spaceLabel1 = Label()
+        spaceLabel1.grid(column=0, row=1, sticky = N+W+E+S)
 
-        diceCountLabel = Label(text="Dice Count", compound=LEFT)
-        diceCountLabel.grid(column=0, row=1, columnspan=2, sticky = N+W+E+S)
+        spaceLabel2 = Label()
+        spaceLabel2.grid(column=0, row=5, sticky = N+W+E+S)
+# Dice Count Input
+        diceCountLabel = Label(text="Dice Count:", anchor=W)
+        diceCountLabel.grid(column=0, row=2, columnspan=2, sticky = N+W+E+S)
 
-        diceCountEntry = Entry()
-        diceCountEntry.grid(column=1, row=1, columnspan=2, sticky = N+W+E+S)
-
+        diceCountEntry = Entry(justify=LEFT)
+        diceCountEntry.grid(column=1, row=2, columnspan=2, sticky = N+W+E+S)
+# Roll, Advantage, Disadvantage
         rollButton = Button(text="ROLL!", bg='#8e478c')
-        rollButton.grid(column=0, row=3, columnspan=2, rowspan=2, sticky = N+W+E+S)
+        rollButton.grid(column=0, row=4, columnspan=2, rowspan=2, sticky = N+W+E+S)
 
         advantageButton = Button(text="Advantage", bg='#71aa34')
-        advantageButton.grid(column=2, row=3, columnspan=3, rowspan=2, sticky = N+W+E+S)
+        advantageButton.grid(column=2, row=4, columnspan=3, rowspan=2, sticky = N+W+E+S)
 
         disadvantageButton = Button(text="Disadvantage", bg='#a93b3b')
-        disadvantageButton.grid(column=5, row=3, columnspan=3, rowspan=2, sticky = N+W+E+S)
-
-
-
+        disadvantageButton.grid(column=5, row=4, columnspan=3, rowspan=2, sticky = N+W+E+S)
+# Raw Input Field
+        rawInputEntry = Entry()
+        rawInputEntry.grid(column=0, row=6, columnspan=6, sticky = N+W+E+S)
+# Dice Type Buttons
         for i1 in range(0,6):
             diceTypeButton = Button(text=diceTypeName[i1], image = diceImage[i1], compound=RIGHT)
-            diceTypeButton.grid(column=i1+2, row=1, rowspan=2, sticky = N+W+E+S)
+            diceTypeButton.grid(column=i1+2, row=2, rowspan=2, sticky = N+W+E+S)
 
         
 
