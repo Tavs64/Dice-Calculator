@@ -22,7 +22,7 @@ def Start():
 def dndStart():
     print("What are you rolling for?")
     global dndType
-    dndType = input("Attack, Skill Check, Saving Throw,") #this is unfineshed btw
+    dndType = input("Attack, Skill Check, Saving Throw,") # this is unfineshed btw
 
 def dndStats(): # This should only happen once, or when character is reset. perhaps we could save multiple characters. Nonetheless this should be replaced by the tkinter interface instead of a prompt. With the interface we could save different profiles
     dndCharLvl = input("What is your Characters Level? ")
@@ -64,9 +64,9 @@ def dndHelp():
     print("Example: 1d20+2 ")
     print('To Go back type "Back"')
 
-''' 
-def wh40kStart():
 
+def wh40kStart():
+'''
 def wh40kDiceCalc():
 
 def wh40kDiceInput():
