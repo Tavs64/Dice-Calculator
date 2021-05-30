@@ -65,14 +65,14 @@ def dndHelp():
     print("Example: 1d20+2 ")
     print('To Go back type "Back"')
 
-
-def wh40kStart():
 '''
+def wh40kStart():
+
 def wh40kDiceCalc():
 
 def wh40kDiceInput():
-'''
 
+'''
 Start()
 
 # TKINTER TIME :)
@@ -89,4 +89,3 @@ class Application(tk.Frame):
         self.create_widgets()
 
     def create_widgets(self):
-        
